@@ -1,0 +1,37 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo {
+    border:1px solid #C0C0C0;
+    border-collapse:collapse;
+    padding:5px;
+}
+.demo th {
+    border:1px solid #C0C0C0;
+    padding:5px;
+    background:#F0F0F0;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.demo td {
+    border:1px solid #C0C0C0;
+    padding:5px;
+    text-align: center;
+}
+.diag {
+    background-color: rgba(0, 64, 255, 0.15);
+}
+.paire {
+    background-color: rgba(45, 241, 255, 0.15);
+}
