@@ -188,5 +188,94 @@ echo "</div>";
         </tbody>
     </table>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Les tableaux associatis</h2>
+
+    <?php 
+    //Un tableau associatifs possède des index que l'on définit nous-même
+    //Un index est unique, on n'est pas obligé de définir tous les $index
+
+    $fruits = [
+        'A' => 'Fraise',
+        'jaune' => 'Banane',
+        'Cerise',
+        'D' => 'Orange',
+        'Pomme',
+    ];
+
+    var_dump($fruits);
+    echo '<br />';
+
+    echo $fruits['jaune'];
+    echo '<br />';
+
+    $fruits['jaune2'] = 'Citron';
+
+    ?>
+
+    <ul>
+        <!-- On peut récupérer l'index avec la double arrow operator (opérateur double fléche) -->
+
+        <?php foreach ($fruits as $index => $fruit) { ?>
+        <li><?= $index.':'.$fruit; ?></li>
+        
+        
+        <?php } ?>
+    </ul>
+
+    <h2>Les tableau multidimensionnels</h2>
+
+    <?php 
+    $users = [//Dimension 1
+        [//Dimension 2
+            'name' => 'mota',
+            'firstname' => 'Fiorella',
+            'phone' => '0600000000',
+            'adresses' => ['Hulluch', 'Lens'],
+        ],
+        [
+            'name' => 'mota',
+            'firstname' => 'Marina',
+            'phone' => '0700000000',
+            'adresses' => ['Hulluch'],
+        ],
+    ];
+
+    //Comment afficher Fiorella Mota vit à Hulluch et à Lens.
+
+    ?>
+
+    <p><?= $users[0]['firstname'].' '.$users[0]['name'];?> vit à <?= $users[0]['adresses'][0]; ?> et à <?= $users[0]['adresses'][1] ?></p>
+
+    <!-- Comment afficher tous les utilisateurs avec toutes leurs adresses -->
+
+    <?php foreach ($users as $user) { ?>
+        <p>
+            <?= $user['firstname'].' '.$user['name']; ?> vit à
+
+            <?php foreach($user['adresses'] as $index => $adress) { ?>
+                 <?= $adress ?> 
+                <?= $index <count($user['adresses']) - 1 ? 'et' :'';?>
+
+            <?php } ?>
+
+        </p>
+    <?php } ?>
+
+
+
 </body>
 </html>
