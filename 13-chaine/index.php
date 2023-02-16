@@ -74,7 +74,5 @@ echo $message;
 
 ?>
 
-<input type="text">
-
 
 
