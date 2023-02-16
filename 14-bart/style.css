@@ -1,0 +1,28 @@
+*{
+    
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+.bart{
+    width: 10%;
+    position: absolute;
+    right: 40%;
+    bottom: -50px;
+
+    
+}
+
+.board{
+    background-color: #18793a;
+    border: 6px solid brown;
+    padding: 12px;
+    position: relative;
+    color: white;
+}
+
+.input{
+    color: black;
+}
+
