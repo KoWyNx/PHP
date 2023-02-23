@@ -32,5 +32,13 @@ function selectAll($query, $exec) {
     $quer->execute($exec);
     return $quer->fetchAll();
 }
+
+/**
+ * Permet de nettoyer les données utilisateur
+ */
   
+ function sanitize($value){
+    // ' <script>toto</script> ' => '&lt;script&gt;toto&lt;/script&gt;'
+    return trim(htmlspecialchars($value ?? ''));
+ }
   
