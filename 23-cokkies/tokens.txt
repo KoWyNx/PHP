@@ -1,0 +1,6 @@
+toto:$2y$10$1A41x.zsLsnnKNMoNgN4sehzgzVC.ozY0SwMgSN6exK3lAb6LJkxG
+fiofio:$2y$10$0XCc.NOH6hYhC3LJAzFv5uXXjf1jt2w2cGdAU4rZCxR3beUd5Lqju
+:$2y$10$3lofAfFZHD8HJ3bD5U/.P.WpJLRDdji.ycZmx4eIHt25mtdDgD3xW
+:$2y$10$Htlc2JrcEvSTNMHIQf0H.ePQ65CxoQRh52prETUfX43M/ArecV5yu
+fares:$2y$10$cKlnFwRDPrMfDUgNkfE54.4PF710EFfccPtAHLLNBV/.tMy0VZwWK
+fares:$2y$10$xwkEUVdXUTvc7xGKSaV2Lua3kmqmUr0xtJ7PifS24jAottplM./Q6
