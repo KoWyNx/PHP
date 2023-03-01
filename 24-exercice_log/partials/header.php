@@ -1,4 +1,5 @@
 <?php require __DIR__. '/../config/db.php'; ?>
+<?php require __DIR__. '/../config/function.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">

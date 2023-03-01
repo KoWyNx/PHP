@@ -1,20 +1,25 @@
+<?php require __DIR__ . '/partials/header.php'; ?>
 <?php
+
 session_start();
 
 $errors = [];
 
 
+
 if (!empty($_POST)) {
-
-
+    
     $user = $_POST['user'] ?? null;
     $password = $_POST['password'] ?? null;
+    
+    $bddUser= selectUser($user);
+
+    var_dump($bddUser);
+    var_dump($password);
 
 
     
-
-
-    if ($user === 'admin' && $password === 'admin') {     
+    if ($bddUser && password_verify($password, $bddUser['password'])) {     
     $_SESSION['user'] = $user;
     $_SESSION['password'] = $password;
     header('Location: connecte.php');
@@ -23,11 +28,10 @@ if (!empty($_POST)) {
     }
 }
 
-var_dump($_SESSION['user']);
-var_dump($_SESSION['password']);
 
 
-require __DIR__ . '/partials/header.php'; ?>
+
+?>
 
 
 <?php foreach($errors as $error) { ?>

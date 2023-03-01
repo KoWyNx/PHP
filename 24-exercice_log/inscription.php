@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 require __DIR__ . '/partials/header.php';
@@ -9,23 +9,22 @@ $user = $_POST['user'] ?? null;
 $password = $_POST['password'] ?? null;
 $confirmation_password = $_POST['verify'] ?? null;
 
-if(!empty($_POST)){
+if (!empty($_POST)) {
 
-    if(strlen($user) === 0){
+    if (strlen($user) === 0) {
         $errors['user'] = 'username obligatoire';
     }
-var_dump($user);
-var_dump($password);
+    var_dump($user);
+    var_dump($password);
 
-    if(empty($errors)){
+    if (empty($errors)) {
         // On fait la requête SQL pour insérer le film
         $query = db()->prepare('INSERT INTO user (user, password) VALUES (:user, :password)');
         $query->execute([
             'user' => $user,
-            'password' => $password,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
         ]);
-    }  
-
+    }
 }
 
 
